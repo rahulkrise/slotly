@@ -6,6 +6,10 @@
 .pnp.js
 .yarn/install-state.gz
 
+.yarn/
+.yarnrc.yml
+.pnp.cjs
+
 # testing
 /coverage
 
