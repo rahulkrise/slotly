@@ -68,7 +68,7 @@ const Dashboard = () => {
             {loading && (
               <BarLoader className="mb-4" width={"10%"} color="#36d7b7" />
             )}
-            <Button variant="primary">Update User</Button>
+            <Button>Update User</Button>
           </form>
         </CardContent>
       </Card>
