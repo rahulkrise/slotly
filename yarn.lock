@@ -4951,9 +4951,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schedulrr@workspace:.":
+"slotly@workspace:.":
   version: 0.0.0-use.local
-  resolution: "schedulrr@workspace:."
+  resolution: "slotly@workspace:."
   dependencies:
     "@clerk/clerk-sdk-node": "npm:^5.0.34"
     "@clerk/nextjs": "npm:^5.3.7"

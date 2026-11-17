@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
     };
   }
   return {
-    title: `${user.name}'s Profile | Schedulrr`,
+    title: `${user.name}'s Profile | Slotly`,
     description: `Book an event with ${user.name}. View available public events and schedules.`,
   };
 }

@@ -29,18 +29,18 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Marketing Manager",
     content:
-      "Schedulrr has transformed how I manage my team's meetings. It's intuitive and saves us hours every week!",
+      "Slotly has transformed how I manage my team's meetings. It's intuitive and saves us hours every week!",
   },
   {
     name: "David Lee",
     role: "Freelance Designer",
     content:
-      "As a freelancer, Schedulrr helps me stay organized and professional. My clients love how easy it is to book time with me.",
+      "As a freelancer, Slotly helps me stay organized and professional. My clients love how easy it is to book time with me.",
   },
 ];
 
 const howItWorks = [
-  { step: "Sign Up", description: "Create your free Schedulrr account" },
+  { step: "Sign Up", description: "Create your free Slotly account" },
   {
     step: "Set Availability",
     description: "Define when you're available for meetings",
@@ -64,7 +64,7 @@ const Home = () => {
             Simplify Your Scheduling
           </h1>
           <p className="text-xl text-gray-600 mb-10">
-            Schedulrr helps you manage your time effectively. Create events, set
+            Slotly helps you manage your time effectively. Create events, set
             your availability, and let others book time with you seamlessly.
           </p>
           <Link href={"/dashboard"}>
@@ -139,7 +139,7 @@ const Home = () => {
           Ready to Simplify Your Scheduling?
         </h2>
         <p className="text-xl mb-6">
-          Join thousands of professionals who trust Schedulrr for efficient time
+          Join thousands of professionals who trust Slotly for efficient time
           management.
         </p>
         <Link href={"/dashboard"}>

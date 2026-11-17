@@ -15,7 +15,7 @@ const Header = async () => {
       <Link href={"/"} className="flex items-center">
         <Image
           src={"/logo.png"}
-          alt="schedulrr-logo"
+          alt="slotly-logo"
           width={150}
           height={60}
           className="h-16 w-auto"
