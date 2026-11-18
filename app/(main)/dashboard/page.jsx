@@ -10,6 +10,8 @@ import { usernameSchema } from "@/app/_lib/validators";
 import useFetch from "@/hooks/use-fetch";
 import { updateUsername } from "@/actions/users";
 import { BarLoader } from "react-spinners";
+import { getUpcomingMeetings } from "@/actions/dashboard";
+import { format } from "date-fns";
 
 const Dashboard = () => {
   const { isLoaded, user } = useUser();
@@ -33,12 +35,46 @@ const Dashboard = () => {
     fnUpdateUsername(data.username);
   };
 
+  const {
+    loading: loadingUpcomingMeetings,
+    data: upcomingMeetings,
+    fn: fnUpcomingMeetings,
+  } = useFetch(getUpcomingMeetings);
+
+  useEffect(() => {
+    (async () => await fnUpcomingMeetings())();
+  }, []);
+
   return (
     <div className="space-y-8">
       <Card>
         <CardHeader>
           <CardTitle>Welcome, {user?.firstName}</CardTitle>
         </CardHeader>
+        <CardContent>
+          {!loadingUpcomingMeetings ? (
+            <div>
+              {upcomingMeetings && upcomingMeetings.length > 0 ? (
+                <ul>
+                  {upcomingMeetings.map((meeting) => (
+                    <li key={meeting.id}>
+                      - {meeting.event.title} on{" "}
+                      {format(
+                        new Date(meeting.startTime),
+                        "MMM d, yyyy h:mm a",
+                      )}{" "}
+                      with {meeting.name}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p>No upcoming meetings</p>
+              )}
+            </div>
+          ) : (
+            <p>Loading upcoming meetings...</p>
+          )}
+        </CardContent>
       </Card>
 
       <Card>
